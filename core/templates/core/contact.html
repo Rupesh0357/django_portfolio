@@ -1,0 +1,68 @@
+{% extends  'core/base.html' %}
+
+{% block content %}
+<div class="container  mt-5 px-5">
+    <h1 class="text-warning mb-4 border-bottom"> <marquee behavior="" direction="">Contact Us</marquee></h1>
+    <div class="row text-white mb-3">
+        <p class="mx-auto mb-3">
+            Do you have any questions? <br>
+             Please do not hesitate to contact.
+              I will come back to you within a matter of hours to help you.
+        </p>
+        <div class="col-sm-9 mb-3">
+            <form method="POST">
+                {% csrf_token %}
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputName">Your Name *</label>
+                        <input type="text" class="form-control"name="name" id="inputName" placeholder="Enter your name here. . . ." required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail">Your Email *</label>
+                        <input type="email" class="form-control" id="inputEmail" name="email" placeholder="example@email.com" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputPhone">Your Contact No. *</label>
+                        <input type="tel" class="form-control" id="inputPhone" name="contact" placeholder=" +91-123 4567 890" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputSubject">Your Subject *</label>
+                        <input type="text" class="form-control" id="inputSubjrct" name="subject" placeholder="Enter your subject here. . . ." required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputTextarea">Your Message Here *</label>
+                        <textarea class="form-control" id="inputTextarea" name="msg" placeholder="Type your message here. . . ." required></textarea>
+                    </div>
+                    <div class="d-grid col-3 mx-auto">
+                    <button class="btn btn-lg btn-outline-primary" type="submit">Send</button>
+                </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-sm-3 text-center">
+            <ul class="list-unstyled">
+                <li>
+                    <i class="fas fa-map-marker-alt fa-2x i-color"></i>
+                    <p>Mumbai, Maharashtra, India.</p>
+                </li>
+                <li>
+                    <i class="fas fa-phone fa-2x i-color"></i>
+                    <p>+91 7875251455</p>
+                </li>
+                <li>
+                    <a href = "mailto: patilrupesh0357@gmail.com">
+                    <i class="fas fa-envelope fa-2x i-color"></i></a>
+                    <p>patilrupesh0357@gmail.com</p>
+                </li>
+                <div class="text-center mt-5">
+                    <a href="https://github.com/Rupesh0357" target="_blank"><i class="fab fa-github fa-2x i-color mx-3"></i></a>
+                    <a href="https://www.linkedin.com/in/rupesh-patil-6a38811aa/" target="_blank"><i class="fab fa-linkedin fa-2x i-color"></i></a>
+                    </div>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %} 
+

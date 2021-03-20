@@ -1,0 +1,18 @@
+    {% load static %}
+    
+    <div  class="border-bottom border-secondary">
+    <div class=" border-bottom border-secondary text-center mt-3">
+
+    <img src="{%  static 'core/images/photo.jpg' %}" alt="Profile" class="image-fluid- rounded-circle mt=5" width="100px" height="100px">
+    <h4 class="text-white mt-3 mb-3 st-font">Rupesh Patil</h4>
+
+    </div>
+    <hr>
+
+    <nav class="nav flex-column text-center mb-2">
+    <a href="{% url 'home'%}" class="nav-link {{home}}">Home</a>
+    <a href="{% url 'services'%}" class="nav-link {{services}}">Services</a>
+    <a href="{% url 'skill'%}" class="nav-link {{skills}}">Skills</a>
+    <a href="{% url 'contact'%}" class="nav-link {{contact}}">Contact</a>
+    </nav>
+    </div>
